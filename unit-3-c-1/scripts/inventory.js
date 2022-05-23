@@ -23,17 +23,27 @@ data.forEach(function (el,index){
        remove(el,index)
    })
    div.append(img,type,desc,price,btn)
-   all_products.append(div)
+   container.append(div)
+
+   function remove(el,index){
+    console.log(el,index)
+   data.splice(index,1)
+   console.log(data)
+   localStorage.setItem("products",JSON.stringify(data))
+   window.location.reload();
+//   localStorage.setItem("button",JSON.stringify(data))
+  
+  }
+
+
+
 })
 
 
 }
-product()
 
-function remove(el,index){
-    console.log("hii")
-   data.slice(index,1)
-    localStorage.setItem("products",JSON.stringify(product))
-        }
+
+
+     
     
  
